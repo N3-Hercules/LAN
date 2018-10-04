@@ -30,25 +30,3 @@ describe('Testing all GET & POST requests', () => {
   test('It should response post alerts method', () => (
     request(app).post('/alert/api/alerts').expect(201)));
 });
-
-// describe('Test the home path', () => {
-//   test('It should response the GET method', () => (
-//     request(app).get('/home').expect(200)));
-// });
-
-// describe('Test the events path', () => {
-//   test('It should response post method', () => (
-//     request(app).post('/alert/api/events').expect(200)));
-// });
-
-// describe('Test the events path', () => {
-//   test('It should response post method', () => (
-//     request(app).post('/alert/api/alerts').expect(201)));
-// });
-
-
-// test
-describe('Test sum function', () => {
-  test('It should properly sum two numbers', () => (
-    expect(sum(1, 2)).toBe(3)));
-})
