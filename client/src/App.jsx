@@ -99,6 +99,9 @@ class App extends React.Component {
       email: userEmail,
       userId: userId,
     });
+    
+    console.log('User ID set', userId);
+    console.log('User ID set to', this.state.userId);
   }
 
   setCoordinates() {
@@ -228,6 +231,7 @@ class App extends React.Component {
       email,
       range,
       filter,
+      userId
     } = this.state;
     console.log(name, picture, email);
     return (!isLoggedIn || !isLoaded)
@@ -245,7 +249,7 @@ class App extends React.Component {
             <Map path="/map" latitude={latitude} longitude={longitude} />
             <AlertOptions path="alertOptions" latitude={latitude} longitude={longitude} appContext={this} handleAlertOptions={this.handleAlertOptions} />
             <Profile path="/profile" logOut={this.logOut} latitude={latitude} longitude={longitude} name={name} picture={picture} email={email} />
-            <Alert path="/alert" category={category} latitude={latitude} longitude={longitude} name={name} EventId={Number(EventId)}/>
+            <Alert path="/alert" category={category} latitude={latitude} longitude={longitude} name={name} EventId={Number(EventId)} userId={userId}/>
           </Router>
           <div className="nav-bar">
             <Link to="/" className="home-grid nav-cell">
@@ -284,8 +288,16 @@ class App extends React.Component {
             <AlertFeed exact path="/" client={client} latitude={latitude} longitude={longitude} range={range} filter={filter} />
             <Map path="/map" latitude={latitude} longitude={longitude} />
             <AlertOptions path="alertOptions" latitude={latitude} longitude={longitude} appContext={this} handleAlertOptions={this.handleAlertOptions} />
+<<<<<<< HEAD
             <Profile path="/profile" name={name} picture={picture}latitude={latitude} longitude={longitude} email={email} logOut={this.logOut} />
             <Alert path="/alert" category={category} latitude={latitude} longitude={longitude} name={name} EventId={Number(EventId)} />
+||||||| merged common ancestors
+            <Profile path="/profile" name={name} picture={picture}latitude={latitude} longitude={longitude} email={email} />
+            <Alert path="/alert" category={category} latitude={latitude} longitude={longitude} name={name} EventId={Number(EventId)} />
+=======
+            <Profile path="/profile" name={name} picture={picture}latitude={latitude} longitude={longitude} email={email} />
+            <Alert path="/alert" category={category} latitude={latitude} longitude={longitude} name={name} EventId={Number(EventId)} userId={userId} />
+>>>>>>> Added user id when alert created so database can be queried for specific user
           </Router>
           <div className="nav-bar">
             <Link to="/" className="home-grid nav-cell">
