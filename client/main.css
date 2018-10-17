@@ -446,13 +446,6 @@ CSS for Mobile
       vertical-align:text-bottom;
     }
 
-    /* .alert-icon {
-      /* position: relative; */
-      /* max-height:40px;
-      max-width:40px;
-      float: right;
-    } */ 
-
     .alert:focus {
       outline: 0;
       background-color: #FFF;
@@ -736,21 +729,19 @@ CSS for Desktops - Dashboard
 ALERT COMPONENTS
 ==================== 
 */
-/* .button-alerts {
-    cursor: pointer;
-    border: none;
-    border-radius: 3px;
-    font-family: 'PT Serif', sans-serif;
-    color: #ECF0F1;
-    background-color: #E74C3C;
-    display: block;
-    padding: 30px 50px 0px 50px;
-    margin: 40px;
-    font-style: bold;
-    font-size: 35px;
-    text-align: center;
+
+  .alert-layout {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: space-between;
+    grid-template-rows: repeat(5, 1fr);
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    
   }
-*/
+  
 .photo-modal-container {
   position: fixed;
   top: 0;
@@ -779,37 +770,6 @@ ALERT COMPONENTS
   border-radius:5px;
 }
 
-
-/*mine*/
-/* .photo-modal-container {
-  background-color: white;
-  min-width: 350px;
-  padding: 15px;
-  border-radius: 5px;
-  text-align: center;
-  overflow: scroll;
-  overflow-x: hide;
-  max-height: 100%;
-  font-size:9px;
-} */
-
-/*
-*/
-.alert-layout {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  align-content: space-between;
-  grid-template-rows: repeat(5, 1fr);
-  max-height: 100%;
-  
-}
-/*
-.photo {
-  grid-row: 1;
-  order: 1;
-}
-*/
 .photo-button-container {
   display:flex;
 }
@@ -1142,17 +1102,17 @@ Profile Page
 Alert Options Page
 ==================== 
 */
+.alert-options-container {
+  grid-template-rows: 5% 75% 20%;
+  max-height: 100%;
+  overflow-y: hidden;
+}
+
 .lat-long-container {
   text-align:right;
   vertical-align:text-top;
-  /* font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif; */
   font-size:10px;
-  /* padding: 5%; */
-  /* border:solid; */
-  /* border-width: 1px;
-  border-radius:10px; */
   margin: 2%;
-  /* background-color:white; */
 }
 
 .category-buttons-container {
@@ -1198,8 +1158,27 @@ Alert Options Page
   float: right;
 }
 
+.confirmation-button-container {
+  display:grid;
+  grid-template-rows: 10% 90%;
+  justify-items: center;
+}
+
+.confirmation-prompt {
+  text-align:left;
+}
+
+.category-confirmation {
+  height:95px;
+  width: 230px;
+  background-color: #6e8c6d;
+  border-radius: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 5px;
+}
+
 #hurricane-button {
-  /* background-image:url(/../button-icons/013-hurricane.png); */
   background-image:url(../icons/button-icons/013-hurricane.png);
   background-size:70% 70%;
   background-repeat:no-repeat;
@@ -1207,7 +1186,6 @@ Alert Options Page
 }
 
 #flood-button {
-  /* background-image:url(/../button-icons/013-hurricane.png); */
   background-image:url(../icons/button-icons/016-flood.png);
   background-size:70% 70%;
   background-repeat:no-repeat;
@@ -1215,7 +1193,6 @@ Alert Options Page
 }
 
 #forest-fire-button {
-  /* background-image:url(/../button-icons/013-hurricane.png); */
   background-image:url(../icons/button-icons/015-fire.png);
   background-size:70% 70%;
   background-repeat:no-repeat;
@@ -1223,7 +1200,6 @@ Alert Options Page
 }
 
 #house-fire-button {
-  /* background-image:url(/../button-icons/013-hurricane.png); */
   background-image:url(../icons/button-icons/014-house.png);
   background-size:70% 70%;
   background-repeat:no-repeat;
@@ -1231,7 +1207,6 @@ Alert Options Page
 }
 
 #earthquake-button {
-  /* background-image:url(/../button-icons/013-hurricane.png); */
   background-image:url(../icons/button-icons/017-earthquake-1.png);
   background-size:70% 70%;
   background-repeat:no-repeat;
@@ -1239,7 +1214,6 @@ Alert Options Page
 }
 
 #landslide-button {
-  /* background-image:url(/../button-icons/013-hurricane.png); */
   background-image:url(../icons/button-icons/006-landslide-2.png);
   background-size:70% 70%;
   background-repeat:no-repeat;
@@ -1247,7 +1221,6 @@ Alert Options Page
 }
 
 #traffic-accident-button {
-  /* background-image:url(/../button-icons/013-hurricane.png); */
   background-image:url(../icons/button-icons/car-collision\ \(1\).png);
   background-size:70% 70%;
   background-repeat:no-repeat;
@@ -1255,7 +1228,6 @@ Alert Options Page
 }
 
 #volcano-eruption-button{
-  /* background-image:url(/../button-icons/013-hurricane.png); */
   background-image:url(../icons/button-icons/001-volcano-1.png);
   background-size:70% 70%;
   background-repeat:no-repeat;
@@ -1263,7 +1235,6 @@ Alert Options Page
 }
 
 #tsunami-button {
-  /* background-image:url(/../button-icons/013-hurricane.png); */
   background-image:url(../icons/button-icons/003-tsunami.png);
   background-size:70% 70%;
   background-repeat:no-repeat;
@@ -1271,7 +1242,6 @@ Alert Options Page
 }
 
 #thief-button {
-  /* background-image:url(/../button-icons/013-hurricane.png); */
   background-image:url(../icons/button-icons/thief.png);
   background-size:70% 70%;
   background-repeat:no-repeat;
@@ -1279,7 +1249,6 @@ Alert Options Page
 }
 
 #blizzard-button {
-  /* background-image:url(/../button-icons/013-hurricane.png); */
   background-image:url(../icons/button-icons/blizzard.png);
   background-size:70% 70%;
   background-repeat:no-repeat;
@@ -1287,9 +1256,9 @@ Alert Options Page
 }
 
 #toxic-button {
-  /* background-image:url(/../button-icons/013-hurricane.png); */
   background-image:url(../icons/button-icons/004-waste.png);
   background-size:70% 70%;
   background-repeat:no-repeat;
   background-position:center;
 }
+
